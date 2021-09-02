@@ -14,15 +14,28 @@ namespace Test1Project
             int CorrectNum = n.Next(0, 100);
             int NumofGuess = 0; 
             bool win = false;
+            
 
             do
             {
-                Console.WriteLine("I thinking of a Number from 0 - 100: ");
+
+                Console.WriteLine("Enter a range for the game.");
+                Console.Write("Type your starting number: ");
+
+                string firstNum;
+                firstNum = Console.ReadLine();
+
+                Console.Write("Type your stopping number: ");
+                string secNum = Console.ReadLine();
+
                 
+
+                Console.WriteLine();
+                Console.WriteLine("Please select a number between " + firstNum + " " + secNum);
                 string r = Console.ReadLine();
-
+                
                 int i = int.Parse(r);
-
+               
                 if (i > CorrectNum)
                 {
                     Console.WriteLine("To high!");
@@ -42,6 +55,7 @@ namespace Test1Project
                     NumofGuess++;
                     win = true;
 
+                  
                 }
             } 
             while (win == false);
